@@ -2,11 +2,9 @@
 
 const stripUpperCase = string => {
   let lowerCase = "";
-  for (let i = 0; i < string.length; i++){
-    if (string[i] === string[i].toLowerCase()){
-      lowerCase += string[i]
-    }
-  } return lowerCase; 
+  for (let i of string){
+     lowerCase = i === i.toLowerCase() ? lowerCase += i : lowerCase ; 
+    } return lowerCase; 
 };
 
 console.log(stripUpperCase("Hello!"))
